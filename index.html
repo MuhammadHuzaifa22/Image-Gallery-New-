@@ -14,23 +14,40 @@
 </head>
 <body>
     
-<div class="full-img">
-    <img src="./Assets/Images/img1.jpg" alt="">
-    <span><i class="fa-solid fa-xmark"></i></span>
+<div class="full-img" id="fullImgBox">
+    <img src="./Assets/Images/img1.jpg" alt="" id="fullImg">
+    <span><i class="fa-solid fa-xmark" onclick="closeFullImg()"></i></span>
 </div>
 
 
 <div class="img-gallery">
-    <img src="./Assets/Images/img1.jpg" alt="">
-    <img src="./Assets/Images/img2.jpg" alt="">
-    <img src="./Assets/Images/img3.jpg" alt="">
-    <img src="./Assets/Images/img4.jpg" alt="">
-    <img src="./Assets/Images/img5.jpg" alt="">
-    <img src="./Assets/Images/img6.jpg" alt="">
-    <img src="./Assets/Images/img7.jpg" alt="">
-    <img src="./Assets/Images/img8.jpg" alt="">
+    <img src="./Assets/Images/img1.jpg" alt="" onclick="openFullImg(this.src)">
+    <img src="./Assets/Images/img2.jpg" alt="" onclick="openFullImg(this.src)">
+    <img src="./Assets/Images/img3.jpg" alt="" onclick="openFullImg(this.src)">
+    <img src="./Assets/Images/img4.jpg" alt="" onclick="openFullImg(this.src)">
+    <img src="./Assets/Images/img5.jpg" alt="" onclick="openFullImg(this.src)">
+    <img src="./Assets/Images/img6.jpg" alt="" onclick="openFullImg(this.src)">
+    <img src="./Assets/Images/img7.jpg" alt="" onclick="openFullImg(this.src)">
+    <img src="./Assets/Images/img8.jpg" alt="" onclick="openFullImg(this.src)">
 
 </div>
 
+<script>
+
+    var fullImgBox = document.getElementById('fullImgBox');
+    var fullImg = document.getElementById('fullImg')
+
+function openFullImg(pic){
+    fullImgBox.style.display = 'flex';
+fullImg.src = pic
+}
+
+
+function closeFullImg(){
+    fullImgBox.style.display = 'none';
+
+}
+
+</script>
 </body>
 </html>
